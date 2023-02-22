@@ -1,0 +1,28 @@
+package com.vaishnavi.basics;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Testing_01 {
+public static WebDriver driver=null;
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\OneDrive\\Desktop\\seleniumedureka.java\\Selenium_testing\\Drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://mail.google.com/mail");
+		/*driver.navigate().to("https://mail.google.com/mail");
+		driver.navigate().back();
+		driver.navigate().forward();
+		driver.navigate().refresh();*/
+		System.out.println(driver.getTitle());
+		
+		System.out.print(driver.getCurrentUrl());
+		
+		System.out.print(driver.getWindowHandle());
+		
+		driver.quit();
+		driver.close();
+
+	}
+
+}
